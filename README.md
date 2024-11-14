@@ -1,9 +1,11 @@
 
-# HP Enterprise Wireless Switch by SNMP - Zabbix Template
+# HP/Aruba Enterprise Wireless Switch by SNMP - Zabbix Template
 
 ## Overview
 
-This Zabbix template provides monitoring for **HP/Aruba Wireless Controllers** and **Access Points (APs)** via SNMP. It is designed for Zabbix 7.x and utilizes Low-Level Discovery (LLD) to automatically detect and monitor HP/Aruba wireless devices.
+**This is a work in progress, work for the next user that is! I used the "HP Enterprise Switch" template as a base and added the AP Item, Discovery and Trigger & Item prototypes and it is working. Listed are the LLD macros I created and OIDs and do with it what you will! Aruba MIB files I found here: https://github.com/librenms/librenms/tree/master/mibs/arubaos
+
+This Zabbix template provides monitoring for **HP/Aruba Wireless Controllers** and **Access Points (APs)** via SNMP. It is designed for Zabbix 7.x and utilizes Low-Level Discovery (LLD) to automatically detect and monitor HP/Aruba wireless devices. Tested and working on Aruba 72XX controllers with 5xx/6XX model APs.
 
 The template includes several OIDs and macros to retrieve important metrics for each AP, including status, model, IP address, uptime, firmware version, and more.
 
@@ -59,6 +61,10 @@ This template enables monitoring of the following parameters for HP/Aruba wirele
 Once the template is linked to the host, Zabbix will begin discovering and monitoring all APs managed by the controller. Each discovered AP will appear in Zabbix under the host, providing real-time metrics based on the above parameters.
 
 ### Example Screenshots
+
+![Showing template and components](../arubaTemp1.jpg)
+
+![Showing discovered and created Tags and APs](arubaTemp2.jpg)
 
 *(Add example screenshots here if available to demonstrate template usage in Zabbix)*
 
